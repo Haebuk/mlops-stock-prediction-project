@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+polygon.api
 
 # C extensions
 *.so
