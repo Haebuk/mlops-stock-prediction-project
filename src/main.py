@@ -1,5 +1,6 @@
-import time
 import os
+import sys
+import time
 
 from utils import get_aggregates, aggs_to_df, get_from_to
 
@@ -24,12 +25,18 @@ def main(ticker, year, month):
 
 if __name__ == "__main__":
     ticker = "SPY"
-    year = 2022
+    if sys.argv[1] == "all":
+        year = 2022
 
-    for m in range(1, 13):
-        main(ticker, year, month=m)
-        time.sleep(12)  # limit 5 requests in 1 minute
+        for m in range(1, 13):
+            main(ticker, year, month=m)
+            time.sleep(12)  # limit 5 requests in 1 minute
 
-    year = 2023
-    for m in range(1, 8):
-        main(ticker=ticker, year=year, month=m)
+        year = 2023
+        for m in range(1, 8):
+            main(ticker=ticker, year=year, month=m)
+
+    else:
+        year, month = int(sys.argv[1]), int(sys.argv[2])
+
+        main(ticker, year, month)
