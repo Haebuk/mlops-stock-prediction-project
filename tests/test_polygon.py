@@ -15,21 +15,22 @@ def test_polygon_api_works():
     ticker = "SPY"
 
     # Get Last Trade
-    trade = client.get_last_trade(ticker=ticker)
-    print(trade)
+    aggs = []
+    for a in client.list_aggs(
+        ticker=ticker,
+        multiplier=5,
+        timespan="minute",
+        from_="2023-07-01",
+        to="2023-07-05",
+        limit=50000,
+    ):
+        aggs.append(a)
+
+    assert len(aggs) > 0
 
 
 # List Aggregates (Bars)
-# aggs = []
-# for a in client.list_aggs(
-#     ticker=ticker,
-#     multiplier=5,
-#     timespan="minute",
-#     from_="2023-07-01",
-#     to="2023-07-31",
-#     limit=50000,
-# ):
-#     aggs.append(a)
+#
 
 # print(aggs)
 
