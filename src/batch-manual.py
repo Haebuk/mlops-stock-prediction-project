@@ -2,17 +2,14 @@ import os
 import sys
 import time
 
-from utils import get_aggregates, aggs_to_df, get_from_to
+from utils import get_from_to
+from stocks import get_aggregates, aggs_to_df
 
 
 def save_data(ticker, year, month):
     from_, to = get_from_to(year, month)
 
-    aggs = get_aggregates(
-        ticker=ticker,
-        from_=from_,
-        to=to,
-    )
+    aggs = get_aggregates(ticker=ticker, from_=from_, to=to)
 
     df = aggs_to_df(aggs, gte=from_, lt=to)
 
