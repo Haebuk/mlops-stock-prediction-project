@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
         year = 2023
         for m in range(1, 8):
-            save_data(ticker=ticker, year=year, month=m)
+            save_data(ticker, year, month=m)
 
     else:
         year, month = int(sys.argv[1]), int(sys.argv[2])
