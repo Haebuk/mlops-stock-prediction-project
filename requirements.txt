@@ -1,6 +1,5 @@
 # python 3.10
 polygon-api-client
 polars==0.18.7
-polygon==1.1.0
 prefect==2.10.21
 prefect-aws==0.3.5
