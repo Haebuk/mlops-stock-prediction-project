@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 polygon.api
+gcp.json
 
 # C extensions
 *.so
