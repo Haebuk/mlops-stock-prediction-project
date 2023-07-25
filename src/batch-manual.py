@@ -40,7 +40,9 @@ def concat_data(ticker):
 
 
 if __name__ == "__main__":
-    ticker = "SPY"
+    from constants import TICKER
+
+    ticker = TICKER
     year = 2022
     for m in range(1, 13):
         save_data(ticker, year, month=m)
