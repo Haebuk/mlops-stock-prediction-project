@@ -1,6 +1,7 @@
 from polygon import RESTClient
 
 from src.utils import load_polygon_api_key
+from src.constants import TICKER
 
 
 def test_load_api_key():
@@ -12,12 +13,10 @@ def test_polygon_api_works():
     POLYGON_API_KEY = load_polygon_api_key()
     client = RESTClient(api_key=POLYGON_API_KEY)
 
-    ticker = "SPY"
-
     # Get Last Trade
     aggs = []
     for a in client.list_aggs(
-        ticker=ticker,
+        ticker=TICKER,
         multiplier=5,
         timespan="minute",
         from_="2023-07-01",

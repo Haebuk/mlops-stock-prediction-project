@@ -1,6 +1,5 @@
 # bigquery schema
-
-[
+BIGQUERY_SCHEMA = [
     {"name": "open", "type": "FLOAT"},
     {"name": "high", "type": "FLOAT"},
     {"name": "low", "type": "FLOAT"},

@@ -50,6 +50,13 @@ $ vi polygon.api
 6. 모델 배포
 7. 모니터링 환경 구축
 
-```
+```bash
 $ astro dev init
+- The GCP service account key json file should be in the root directory of the project and named as `gcp.json`
+```
+
+```bash
+$ cd infrastructures
+$ terraform init
+$ terraform apply
 ```

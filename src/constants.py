@@ -1,0 +1,7 @@
+PROJECT_ID = "mlops-zoomcamp-kade"
+DATASET_NAME = "stock_data"
+TABLE_NAME = "spy"
+TABLE_ID = f"{PROJECT_ID}.{DATASET_NAME}.{TABLE_NAME}"
+GOOGLE_APPLICATION_CREDENTIALS_PATH = "gcp.json"
+
+TICKER = "SPY"
