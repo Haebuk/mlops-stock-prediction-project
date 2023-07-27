@@ -30,6 +30,7 @@ I used SPY ETF as a target stock. It is a ETF that tracks S&P 500 index. It is a
 ## Pre-requisites
 - Python 3.10
 - Terraform
+- [Astro CLI](https://docs.astronomer.io/astro/cli/overview)
 - I used [polygon.io](https://polygon.io/) API for stock data. You need to get api key from polygon.io and set it as an environment variable.
 
 ```bash
@@ -48,3 +49,7 @@ $ vi polygon.api
 5. 매시 저장될 때 마다 학습하는 모델 개발
 6. 모델 배포
 7. 모니터링 환경 구축
+
+```
+$ astro dev init
+```
